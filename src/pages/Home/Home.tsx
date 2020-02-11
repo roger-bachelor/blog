@@ -3,4 +3,6 @@ import { RouteComponentProps } from 'react-router'
 
 import css from './Home.module.scss'
 
-export const HomePage: React.FC<RouteComponentProps> = () => <></>
+export const HomePage: React.FC<RouteComponentProps> = () => (
+    <article className={css.container}></article>
+)
