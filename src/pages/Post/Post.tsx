@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from 'react'
 import { RouteComponentProps } from 'react-router-dom'
 
-// Getting da slugs
+import { Box, BlockContent } from '../../components'
+
+import { IPost } from '../../types/post'
 import { getPostBySlug } from '../../data/post'
 
 import css from './Post.module.scss'
-
-import { IPost } from '../../types/post'
 
 export const PostPage: React.FC<RouteComponentProps> = ({ match }) => {
     const [post, setPost] = useState<IPost>()
@@ -19,16 +19,23 @@ export const PostPage: React.FC<RouteComponentProps> = ({ match }) => {
             .catch(err => console.log(err))
     }, [match.params])
 
+    if (!post) {
+        return <p>OOPS</p>
+    }
+
+    console.log(post.body)
+
     return (
-        <>
-            {post ? (
-                <article>
-                    <h1>{post.title}</h1>
-                    <p>{post.slug.current}</p>
-                </article>
-            ) : (
-                <p>OOPS</p>
-            )}
-        </>
+        <Box>
+            <article className={css.container}>
+                <h1 className={css.title}>{post.title}</h1>
+
+                <section className={css.metadata}>
+                    <span>11.02.2020</span>
+                </section>
+
+                <BlockContent blocks={post.body} />
+            </article>
+        </Box>
     )
 }
