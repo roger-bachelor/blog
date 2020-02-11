@@ -3,10 +3,10 @@ header.container {
     font-size: 72px;
 
     .top {
-        color: black;
+        color: var(--color);
     }
 
     .blog {
-        color: #a74a4a;
+        color: var(--accent-color);
     }
 }
