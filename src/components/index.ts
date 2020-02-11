@@ -1,3 +1,5 @@
 export { Box } from './Box'
+export { BlogPostBox } from './BlogPostBox'
+export { BlogPostsContainer } from './BlogPostsContainer'
 export { Header } from './Header'
 export { SocialIcons } from './SocialIcons'
