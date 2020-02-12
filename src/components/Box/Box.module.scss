@@ -19,7 +19,7 @@ div.container {
 
 @media (prefers-color-scheme: dark) {
     div.container {
-        background: #343643;
+        background: var(--background-color);
         box-shadow: 20px 20px 60px #2c2e39, -20px -20px 60px #3c3e4d;
     }
 }
