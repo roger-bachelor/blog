@@ -17,7 +17,7 @@ export const SocialIcons = () => (
             <Globe />
         </a>
 
-        <a href="https://antive.donate" className={css.donate}>
+        <a href="https://donate.antive.tech" className={css.donate}>
             <DollarSign />
         </a>
     </section>
