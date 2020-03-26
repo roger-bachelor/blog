@@ -15,7 +15,7 @@ const HomePage = () => {
     }, [])
 
     if (!posts) {
-        return <>Please wait.</>
+        return <></>
     }
 
     return (
@@ -30,8 +30,18 @@ const HomePage = () => {
 }
 
 const Container = styled.div`
-    > * {
-        margin: 3rem auto;
+    margin: 0 1rem;
+
+    display: grid;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+
+    grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+    grid-gap: 3rem;
+
+    @media only screen and (max-width: 768px) {
+        display: block;
     }
 `
 

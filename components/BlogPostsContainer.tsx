@@ -17,8 +17,11 @@ export const BlogPostsContainer: React.FC<BlogPostsContainerProps> = ({ posts })
 )
 
 const Container = styled.section`
-    margin: 10rem;
-    > * {
-        margin: 100px;
-    }
+    display: grid;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-gap: 30px;
 `

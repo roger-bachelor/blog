@@ -37,7 +37,7 @@ const Wrapper = styled.div``
 const Date = styled.p`
     color: var(--accent-color);
 
-    font-family: 'Courier New', Courier, monospace;
+    font-family: var(--code-font);
     font-weight: bold;
 `
 

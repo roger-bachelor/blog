@@ -21,6 +21,6 @@ const FooterContainer = styled.footer``
 
 const Copyright = styled.p`
     color: var(--color);
-    font-family: 'Courier New', Courier, monospace;
+    font-family: var(--code-font);
     font-weight: bold;
 `

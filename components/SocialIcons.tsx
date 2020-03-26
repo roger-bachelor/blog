@@ -28,22 +28,22 @@ SocialIcons.defaultProps = {
         github: {
             url: 'https://github.com/antive',
             icon: <GitHub />,
-            hoverColor: '',
+            hoverColor: '#6e5494',
         },
         slack: {
             url: 'https://antive.slack.com',
             icon: <Slack />,
-            hoverColor: '',
+            hoverColor: 'green',
         },
         website: {
             url: 'https://antive.tech',
             icon: <Globe />,
-            hoverColor: '',
+            hoverColor: '#e99',
         },
         donate: {
             url: 'https://donate.antive.tech',
             icon: <DollarSign />,
-            hoverColor: '',
+            hoverColor: 'green',
         },
     },
 }
@@ -53,10 +53,13 @@ const Container = styled.div`
     flex-direction: row;
     align-items: flex-start;
     justify-content: flex-start;
+
+    margin: 0 -6px;
 `
 
 const Link = styled.a`
-    margin: 6px;
+    margin: 0 6px;
+
     color: var(--color);
 
     transition: color 0.3s;
