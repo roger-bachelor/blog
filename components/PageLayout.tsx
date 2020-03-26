@@ -16,15 +16,18 @@ export const PageLayout: React.FC<PageLayoutProps> = ({ title, children }) => (
             <link rel="icon" href="/favicon.ico" />
         </Head>
 
-        <Header />
+        <Sidebar>
+            <Header />
 
-        <Description>
-            A bachelor project of 2020, Western Norway University of Applied Sciences.
-        </Description>
+            <Description>
+                A bachelor project of 2020, Western Norway University of Applied
+                Sciences.
+            </Description>
 
-        <Footer />
+            <Footer />
+        </Sidebar>
 
-        <Content>{children}</Content>
+        <Content children={children} />
     </PageContainer>
 )
 
@@ -48,7 +51,13 @@ const PageContainer = styled.div`
 
     /*place-items: start;
     place-content: start;*/
+
+    @media only screen and (max-width: 768px) {
+        display: block;
+    }
 `
+
+const Sidebar = styled.div``
 
 const Header = styled(HeaderComponent)`
     grid-area: header;
@@ -60,9 +69,10 @@ const Footer = styled(FooterComponent)`
 
 const Description = styled.p`
     grid-area: description;
+
+    font-weight: 300;
 `
 
 const Content = styled.main`
     grid-area: content;
-    margin: 0 auto;
 `
