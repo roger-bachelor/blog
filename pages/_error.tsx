@@ -1,10 +1,10 @@
 import React from 'react'
-import { RouteComponentProps } from 'react-router-dom'
+import styled from 'styled-components'
 
-import css from './404.module.scss'
+import { PageLayout } from '../components'
 
-export const NotFoundPage: React.FC<RouteComponentProps> = () => (
-    <article className={css.container}>
+const NotFoundPage = () => (
+    <PageLayout title="Antive | 404">
         <h1>
             We could not find that page{' '}
             <span aria-label="Eyes Emoji" role="img">
@@ -16,5 +16,7 @@ export const NotFoundPage: React.FC<RouteComponentProps> = () => (
             But, we will keep looking. In the meantime, please check the URL or try
             again.
         </p>
-    </article>
+    </PageLayout>
 )
+
+export default NotFoundPage

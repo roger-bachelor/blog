@@ -1,5 +1,0 @@
-export { HomePage } from './Home'
-export { PostPage } from './Post'
-export { AuthorPage } from './Author'
-export { AboutUsPage } from './AboutUs'
-export { NotFoundPage } from './404'
