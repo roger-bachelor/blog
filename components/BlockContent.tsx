@@ -1,9 +1,8 @@
 import React from 'react'
+
 import { default as BC } from '@sanity/block-content-to-react'
 
-import { config } from '../../sanity/client'
-
-import css from './BlockContent.module.scss'
+import { config } from '../content/sanity/client'
 
 interface BlockContentProps {
     blocks: any
@@ -21,11 +20,12 @@ const serializers: any = {
     },
 }
 
+// TODO: Fix styling
 export const BlockContent: React.FC<BlockContentProps> = ({ blocks }) => (
     <BC
         blocks={blocks}
         serializers={serializers}
-        className={css.body}
+        className={'body'}
         projectId={config.projectId}
         dataset={config.dataset}
     />

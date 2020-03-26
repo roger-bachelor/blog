@@ -1,18 +1,24 @@
 import React from 'react'
+import styled from 'styled-components'
 
-import { BlogPostBox } from '..'
-import { IPost } from '../../types/post'
-
-import css from './BlogPostsContainer.module.scss'
+import { BlogPostBox } from '.'
+import { IPost } from '../content/types/post'
 
 interface BlogPostsContainerProps {
     posts: IPost[]
 }
 
 export const BlogPostsContainer: React.FC<BlogPostsContainerProps> = ({ posts }) => (
-    <section className={css.container}>
+    <Container>
         {posts.map(post => (
             <BlogPostBox post={post} />
         ))}
-    </section>
+    </Container>
 )
+
+const Container = styled.section`
+    margin: 10rem;
+    > * {
+        margin: 100px;
+    }
+`
