@@ -32,7 +32,7 @@ export const PageLayout: React.FC<PageLayoutProps> = ({ title, children }) => (
         </Sidebar>
 
         <Detail>
-            <Navbar />
+            {/*<Navbar />*/}
             <Content children={children} />
         </Detail>
     </PageContainer>
