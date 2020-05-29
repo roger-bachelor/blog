@@ -1,0 +1,12 @@
+header.container {
+    font-weight: bold;
+    font-size: 72px;
+
+    .top {
+        color: var(--color);
+    }
+
+    .blog {
+        color: var(--accent-color);
+    }
+}

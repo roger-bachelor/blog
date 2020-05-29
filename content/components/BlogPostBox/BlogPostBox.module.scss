@@ -1,0 +1,27 @@
+.box {
+    max-width: 768px;
+    padding: 1rem 3rem;
+
+    article.container {
+        p.publishedAt {
+            color: var(--accent-color);
+
+            font-family: 'Courier New', Courier, monospace;
+            font-weight: bold;
+        }
+
+        section.body {
+            font-family: Helvetica;
+            font-weight: 200;
+
+            line-height: 1.2;
+        }
+
+        p.readmore {
+            color: inherit;
+
+            font-family: 'Courier New', Courier, monospace;
+            font-weight: bold;
+        }
+    }
+}

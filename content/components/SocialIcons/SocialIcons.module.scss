@@ -1,0 +1,36 @@
+section.container {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+
+    a {
+        margin: 6px;
+        color: var(--color);
+
+        transition: color 0.3s;
+
+        /* TODO: Tweak colors */
+
+        &.github {
+            &:hover {
+                color: purple;
+            }
+        }
+        &.slack {
+            &:hover {
+                color: green;
+            }
+        }
+        &.website {
+            &:hover {
+                color: red;
+            }
+        }
+        &.donate {
+            &:hover {
+                color: blue;
+            }
+        }
+    }
+}
