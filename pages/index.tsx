@@ -9,9 +9,7 @@ const HomePage = () => {
     const [posts, setPosts] = useState<IPost[]>()
 
     useEffect(() => {
-        getAllPosts()
-            .then(setPosts)
-            .catch(console.error)
+        getAllPosts().then(setPosts).catch(console.error)
     }, [])
 
     if (!posts) {
@@ -21,7 +19,7 @@ const HomePage = () => {
     return (
         <PageLayout title="Antive | Home">
             <Container>
-                {posts.map(post => (
+                {posts.map((post) => (
                     <BlogPostBox key={post._id} post={post} />
                 ))}
             </Container>
@@ -30,8 +28,6 @@ const HomePage = () => {
 }
 
 const Container = styled.div`
-    margin: 0 1rem;
-
     display: grid;
     flex-direction: row;
     flex-wrap: wrap;
