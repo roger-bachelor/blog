@@ -1,0 +1,12 @@
+/* IBM Plex Mono */
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@700&display=swap');
+
+:root {
+    --main-font: 'Helvetica Neue', -apple-system, BlinkMacSystemFont, 'Segoe UI',
+        'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', sans-serif;
+
+    --code-font: 'IBM Plex Mono', 'Courier New', monospace, source-code-pro, Menlo,
+        Monaco, Consolas;
+
+    line-height: 1.5;
+}

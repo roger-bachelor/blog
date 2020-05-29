@@ -1,0 +1,33 @@
+@import 'colors';
+@import 'typography';
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+
+    color: var(--color);
+    background-color: var(--background-color);
+
+    font-family: var(--main-font);
+
+    /* Etc. */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+}
+
+code {
+    font-family: var(--code-font);
+}
+
+* {
+    box-sizing: border-box;
+}
