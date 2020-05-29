@@ -3,7 +3,11 @@ import styled from 'styled-components'
 
 import Head from 'next/head'
 
-import { Header as HeaderComponent, Footer as FooterComponent } from '.'
+import {
+    Header as HeaderComponent,
+    Footer as FooterComponent,
+    Navbar as NavbarComponent,
+} from '.'
 
 interface PageLayoutProps {
     title: string
@@ -27,7 +31,10 @@ export const PageLayout: React.FC<PageLayoutProps> = ({ title, children }) => (
             <Footer />
         </Sidebar>
 
-        <Content children={children} />
+        <Detail>
+            <Navbar />
+            <Content children={children} />
+        </Detail>
     </PageContainer>
 )
 
@@ -58,7 +65,8 @@ const PageContainer = styled.div`
 `
 
 const Sidebar = styled.div``
-
+const Detail = styled.div``
+const Navbar = styled(NavbarComponent)``
 const Header = styled(HeaderComponent)`
     grid-area: header;
 `

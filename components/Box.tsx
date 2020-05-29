@@ -14,12 +14,11 @@ const BoxContainer = styled.div`
 
     outline: 0;
 
-    transition: all 0.1s ease;
-
     background-color: var(--background-color);
-
     box-shadow: -9px -9px 16px var(--neumorphic-leading-shadow-color),
         9px 9px 16px var(--neumorphic-trailing-shadow-color);
+
+    transition: all 0.1s ease;
 
     &:hover {
         /* TODO */
