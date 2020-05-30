@@ -13,7 +13,7 @@ export const BlogPostBox: React.FC<BlogPostBoxProps> = ({ post }) => (
         <Wrapper>
             <h1>{post.title}</h1>
 
-            <Date>11.02.2020</Date>
+            <DateField>{new Date(post.publishedAt).toLocaleDateString()}</DateField>
 
             {/* TODO: Markdown renderer */}
             {/*<p>{post.body}</p>*/}
@@ -34,7 +34,7 @@ const Box = styled(BaseBox)`
 
 const Wrapper = styled.div``
 
-const Date = styled.p`
+const DateField = styled.p`
     color: var(--accent-color);
 
     font-family: var(--code-font);
