@@ -19,9 +19,16 @@ const HomePage = () => {
     return (
         <PageLayout title="Antive | Home">
             <Container>
-                {posts.map((post) => (
-                    <BlogPostBox key={post._id} post={post} />
-                ))}
+                {posts
+                    .sort((a, b) => {
+                        const first = new Date(a.publishedAt).getTime()
+                        const second = new Date(b.publishedAt).getTime()
+
+                        return second - first
+                    })
+                    .map((post) => (
+                        <BlogPostBox key={post._id} post={post} />
+                    ))}
             </Container>
         </PageLayout>
     )
