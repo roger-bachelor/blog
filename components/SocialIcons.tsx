@@ -15,8 +15,8 @@ interface SocialIconsProps {
 
 export const SocialIcons: React.FC<SocialIconsProps> = ({ links }) => (
     <Container>
-        {Object.keys(links).map(key => (
-            <Link href={links[key].url} hoverColor={links[key].hoverColor}>
+        {Object.keys(links).map((key) => (
+            <Link key={key} href={links[key].url} hoverColor={links[key].hoverColor}>
                 {links[key].icon}
             </Link>
         ))}
@@ -65,6 +65,6 @@ const Link = styled.a`
     transition: color 0.3s;
 
     &:hover {
-        color: ${props => props.hoverColor};
+        color: ${(props) => props.hoverColor};
     }
 `
