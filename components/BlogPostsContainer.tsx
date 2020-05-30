@@ -10,7 +10,7 @@ interface BlogPostsContainerProps {
 
 export const BlogPostsContainer: React.FC<BlogPostsContainerProps> = ({ posts }) => (
     <Container>
-        {posts.map(post => (
+        {posts.map((post) => (
             <BlogPostBox post={post} />
         ))}
     </Container>
